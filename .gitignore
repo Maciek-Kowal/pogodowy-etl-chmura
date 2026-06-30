@@ -1,0 +1,6 @@
+gcp-klucz.json
+.venv/
+venv/
+.idea/
+__pycache__/
+*.pyc
