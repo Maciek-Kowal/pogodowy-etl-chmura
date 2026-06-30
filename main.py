@@ -10,7 +10,6 @@ LOKALIZACJE = {
     "Kołobrzeg": (54.1757, 15.5833)
 }
 
-# --- TUTAJ WPISZ SWOJE ID PROJEKTU ---
 ID_PROJEKTU = "pogoda-etl"
 TABELA_DOCELOWA = "dane_pogodowe.pomiary_codzienne"
 
@@ -49,9 +48,8 @@ def zaladuj_do_bigquery(df, projekt_id, tabela):
     print("Rozpoczynam ładowanie danych do Google BigQuery...")
     dane_uwierzytelniajace = service_account.Credentials.from_service_account_file('gcp-klucz.json')
 
-    # Używamy jawnie pandas_gbq zamiast df.to_gbq()
     pandas_gbq.to_gbq(
-        df,  # Przekazujemy naszą tabelę jako pierwszy argument
+        df,
         destination_table=tabela,
         project_id=projekt_id,
         credentials=dane_uwierzytelniajace,
