@@ -48,18 +48,18 @@ Proces został podzielony na trzy odizolowane logicznie etapy, kontrolowane prze
 
 1. Sklonuj repozytorium:
    ```bash
-   git clone [https://github.com/Maciek-Kowal/pogodowy-etl-chmura.git](https://github.com/Maciek-Kowal/pogodowy-etl-chmura.git)
+   git clone https://github.com/Maciek-Kowal/pogodowy-etl-chmura.git
    ```
 2. Zainstaluj wymagane biblioteki:
    ```bash
-  pip install -r requirements.txt
+   pip install -r requirements.txt
    ```
 
-3. Umieść klucz Service Account z Google Cloud (plik .json) w katalogu głównym i nazwij go gcp-klucz.json (plik jest ignorowany przez .gitignore).
+3. Umieść klucz Service Account z Google Cloud (plik `.json`) w katalogu głównym i nazwij go `gcp-klucz.json` (plik jest ignorowany przez `.gitignore`).
 
-4. W pliku main.py podmień zmienną ID_PROJEKTU na swoje ID z GCP.
+4. W pliku `main.py` podmień zmienną `ID_PROJEKTU` na swoje ID z GCP.
 
-5.Uruchom proces:
+5. Uruchom proces:
    ```bash
    python main.py
    ```
